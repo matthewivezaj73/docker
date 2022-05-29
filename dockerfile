@@ -9,6 +9,7 @@ ENV PORT 80
 COPY package.json /code/package.json
 #docker executes npm install. Anything after RUN is ran.
 RUN npm install
+#Copy will take everything in the current directory and put it in my image.
 COPY . /code
 CMD [ "node", "src/server.js" ]
 
