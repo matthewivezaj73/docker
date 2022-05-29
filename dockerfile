@@ -7,6 +7,7 @@ WORKDIR /code
 ENV PORT 80
 #Package.json tells node what modules we want to use and what the requirements are.
 COPY package.json /code/package.json
+#docker executes npm install. Anything after RUN is ran.
 RUN npm install
 COPY . /code
 CMD [ "node", "src/server.js" ]
