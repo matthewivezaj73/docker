@@ -11,5 +11,6 @@ COPY package.json /code/package.json
 RUN npm install
 #Copy will take everything in the current directory and put it in my image.
 COPY . /code
+#CMD is used to give the engine the default command it should run when it starts the container.
 CMD [ "node", "src/server.js" ]
 
